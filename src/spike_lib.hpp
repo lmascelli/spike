@@ -7,6 +7,8 @@
 
 namespace SPIKE
 {
+
+    // The Spike_Train class is the abstraction for Spike_Train data.
     class Spike_Train
     {
     public:
@@ -14,6 +16,8 @@ namespace SPIKE
         double bin_size = 0;
     };
 
+    // The Raw_Data class is an abstraction for reading different data format.
+    // It holds and compute the simples statistics of raw data as mean and std;
     class Raw_Data
     {
     public:
@@ -30,6 +34,7 @@ namespace SPIKE
         bool computed_mean = false, computed_std = false;
     };
 
+    // The Group class is meant to be a collection of spike trains from different electrodes.
     class Group
     {
     public:
