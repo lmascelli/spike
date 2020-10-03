@@ -40,6 +40,7 @@ namespace SPIKE
     public:
         std::vector<Spike_Train> el;
         std::vector<unsigned int> isi(int i);
+        // TODO Maybe create a matrix struct for returning 2D array.
         std::vector<unsigned int> cisi(int i, int j);
     };
 

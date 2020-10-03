@@ -1,3 +1,5 @@
+// SPIKE_LIB
+
 #include "spike_lib.hpp"
 #include <fstream>
 #include <sstream>
