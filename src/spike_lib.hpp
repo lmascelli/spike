@@ -40,6 +40,7 @@ namespace SPIKE
     public:
         std::vector<Spike_Train> el;
         std::vector<unsigned int> isi(int i);
+        std::vector<unsigned int> cisi(int i, int j);
     };
 
     Raw_Data &load_data(std::string file);
