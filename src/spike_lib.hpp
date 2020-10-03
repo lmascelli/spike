@@ -4,13 +4,29 @@
 
 namespace SPIKE
 {
-    struct Raw_Data
+
+    class Spike_Train
     {
-        double sampling_frequency = 0;
-        std::vector<double> data;
-        double mean = 0;
-        double std = 0;
+        std::vector<unsigned int> data;
+        double bin_size = 0;
     };
 
-    Raw_Data *load_data(std::string file);
+    class Raw_Data
+    {
+    public:
+        double sampling_frequency = 0;
+        std::vector<double> data;
+
+        double mean();
+        double std();
+        ~Raw_Data();
+
+    private:
+        double t_mean = 0;
+        double t_std = 0;
+        bool computed_mean = false, computed_std = false;
+    };
+
+    Raw_Data &load_data(std::string file);
+    Spike_Train &hard_thresold(Raw_Data &d);
 } // namespace SPIKE
